@@ -6,10 +6,17 @@ let palabras = [
     "cerveza",
     "galleta",
     "platano",
-    "sopa",
+    "computador",
     "comida",
-    "software"
+    "software",
+    "spiderman",
+    "vengador",
+    "camisa",
+    "pelicula",
+    "cabeza"
+
 ];
+let correcto = 0;
 let palabrasuser = [];
 aleatorio = Math.floor(Math.random() * (palabras.length));
 seleccion = palabras[aleatorio]
@@ -31,27 +38,39 @@ Form.addEventListener("submit", function (event) {
 });
 
 
-
 function f_a(letra) { // let a = document.getElementById("btna").value;
-    let resultado2  = array.filter(x => x.toLowerCase().includes(letra));
-    //const resultado2 = array.find(array => array == 'a');
+    let resultado2 = array.filter(x => x.toLowerCase().includes(letra));
+    // const resultado2 = array.find(array => array == 'a');
     console.log("clicka", resultado2)
 
-for (let index = 0; resultado2.length; index++) {
-   
-    //var btn = document.createElement("button");
-    //var btn = '<img src="aaaa" alt="rrr"/>';
-    var btn =document.createElement('img')
-    btn.src = '/img/'+letra+'.png';
-    //btn.setAttribute('style', 'background-color: black' );
-    //btn.innerText= "A";
-    let quita = document.getElementById("form");
-    let pone = document.getElementById("img_"+letra);
-    quita.replaceChild(btn, pone)
-    document.getElementById('btn'+letra).style.visibility='hidden';
-}
+    if (array.length == 1) {
+        
+        document.getElementById('oculto').style.display = "";;
+
+    } 
+
+        if (resultado2.length < 1) {
+            document.getElementById('btn' + letra).style.visibility = 'hidden';
+        } else {
+
+            for (let index = 0; resultado2.length; index++) {
+                var btn = document.createElement('img')
+                btn.src = '/img/' + letra + '.png';
+                let quita = document.getElementById("form");
+                let pone = document.getElementById("img_" + letra);
+                quita.replaceChild(btn, pone)
+                document.getElementById('btn' + letra).style.visibility = 'hidden';
+                correcto = correcto + 1;
+                array = array.filter(function (f) {
+                    return f !== letra;
+                })
+            }
+        }
+
 
     
+
+
 }
 
 
