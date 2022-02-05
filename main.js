@@ -13,10 +13,13 @@ let palabras = [
     "vengador",
     "camisa",
     "pelicula",
-    "cabeza"
+    "cabeza",
+    "pantalon",
+    "bailar"
 
 ];
 let correcto = 0;
+let incorrecto = 0;
 let palabrasuser = [];
 aleatorio = Math.floor(Math.random() * (palabras.length));
 seleccion = palabras[aleatorio]
@@ -44,31 +47,32 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
     console.log("clicka", resultado2)
 
     if (array.length == 1) {
-        
+
         document.getElementById('oculto').style.display = "";;
+      
+    }
 
-    } 
+    if (resultado2.length < 1) {
+        //document.getElementById('btn' + letra).style.visibility = 'hidden';
+        document.getElementById('btn'+letra).setAttribute("disabled","disabled");
+      
+        
+    } else {
 
-        if (resultado2.length < 1) {
-            document.getElementById('btn' + letra).style.visibility = 'hidden';
-        } else {
-
-            for (let index = 0; resultado2.length; index++) {
-                var btn = document.createElement('img')
-                btn.src = '/img/' + letra + '.png';
-                let quita = document.getElementById("form");
-                let pone = document.getElementById("img_" + letra);
-                quita.replaceChild(btn, pone)
-                document.getElementById('btn' + letra).style.visibility = 'hidden';
-                correcto = correcto + 1;
-                array = array.filter(function (f) {
-                    return f !== letra;
-                })
-            }
+        for (let index = 0; resultado2.length; index++) {
+            var btn = document.createElement('img')
+            btn.src = '/img/' + letra + '.png';
+            let quita = document.getElementById("form");
+            let pone = document.getElementById("img_" + letra);
+            quita.replaceChild(btn, pone)
+            document.getElementById('btn'+letra).setAttribute("style", "background-color: #4B91F9;");
+            document.getElementById('btn'+letra).setAttribute("id", "btnokd"+letra);
+            correcto = correcto + 1;
+            array = array.filter(function (f) {
+                return f !== letra;
+            })
         }
-
-
-    
+    }
 
 
 }

@@ -1,0 +1,39 @@
+body {
+background-color: #1d3557;
+ background-image: url("img/ok.jpg");
+ background-repeat: no-repeat;
+ background-size :cover;
+}
+
+.form {
+
+    background-color: rgb(11, 32, 56);
+    border-radius: 3em;
+    width: 700px;
+    height: 300px;
+    margin: 1em;
+    padding: 2em;opacity: 98%;
+   
+    border: solid 4px rgb(185, 15, 148);
+}
+
+.boton {
+    text-align: center;
+    background-color : rgb(38, 73, 228);
+    color : rgb(238, 238, 238);
+    border-radius : 5px;
+    width : 7%;
+    height : 12%;
+    font-size : 25px;
+    cursor: pointer;
+    border: 0px;
+
+}
+
+
+.boton:disabled {
+    background-color : rgb(48, 50, 61);
+
+    
+
+}
