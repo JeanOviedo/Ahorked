@@ -55,6 +55,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
     if (resultado2.length < 1) {
         //document.getElementById('btn' + letra).style.visibility = 'hidden';
         document.getElementById('btn'+letra).setAttribute("disabled","disabled");
+        document.getElementById("img").src="/img/ahorcado.png";
       
         
     } else {
@@ -65,7 +66,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             let quita = document.getElementById("form");
             let pone = document.getElementById("img_" + letra);
             quita.replaceChild(btn, pone)
-            document.getElementById('btn'+letra).setAttribute("style", "background-color: #4B91F9;");
+            document.getElementById('btn'+letra).setAttribute("style", "background-color: #e600b0;");
             document.getElementById('btn'+letra).setAttribute("id", "btnokd"+letra);
             correcto = correcto + 1;
             array = array.filter(function (f) {

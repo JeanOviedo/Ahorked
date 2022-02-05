@@ -7,14 +7,14 @@ background-color: #1d3557;
 
 .form {
 
-    background-color: rgb(11, 32, 56);
+    background-color: rgb(12, 5, 58);
     border-radius: 3em;
     width: 700px;
-    height: 300px;
+    height: 400px;
     margin: 1em;
-    padding: 2em;opacity: 98%;
+    padding: 2em;opacity: 95%;
    
-    border: solid 4px rgb(185, 15, 148);
+    border: solid 3px #e600b0;
 }
 
 .boton {
@@ -30,6 +30,15 @@ background-color: #1d3557;
 
 }
 
+.img {
+
+    width:  10%;
+}
+.oculto{
+font-size: 30px;
+color: #e600b0;
+
+}
 
 .boton:disabled {
     background-color : rgb(48, 50, 61);
