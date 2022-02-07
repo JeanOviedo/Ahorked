@@ -11,13 +11,31 @@
   <body>
     <div id="add_to_me">
       <h1>Ahorked</h1>
-      <p id="add_after_me">Juego del Ahorcado</p>
+      <!-- <p id="add_after_me">Juego del Ahorcado</p> -->
     </div>
 <center>
-    <div class="form" id="form"><br />
+  <div class="form" id="formperdiste" style="display: none;">
+    <img src="/img/ahorcado.png" id="imgj" class="img"><br />
+    <div class="oculto" id="oculto2" style="display: none;">¡Perdiste!</div><br /><br />
+  </div>
+
+  <div class="form" id="formganaste" style="display: none;">
+    <img src="/img/duende.png" id="imgj" class="img"><br />
+    <div class="oculto" id="oculto" style="display: none;">¡Ganastes!</div><br /><br />
+  </div>
+
+  
+  <div class="form" id="formhome" >
+    <img src="/img/duende.png" id="imgj" class="img"><br /><br />
+    <div class="oculto" id="oculto" style="display: none;">¡Jugar!</div><br /><br />
+    <button type="submit" class="botona" onclick="jugar('a')" name="btna" id="btna">Jugar</button>
+    <button type="submit" class="botona" onclick="palabra('a')" name="btna" id="btna">Agregar Palabras</button>
+  </div>
+
+    <div class="form" id="form" style="display: none;">
         <img src="/img/duende.png" id="img" class="img">
-      <br /><br />  <div class="oculto" id="oculto" style="display: none;">¡Ganastes!</div>
-      <div class="oculto" id="oculto2" style="display: none;">¡Perdiste!</div><br /><br />
+      <br /><br /> 
+      
       <button type="submit" class="boton" onclick="f_a('a')" name="btna" id="btna">A</button>
       <button type="submit" class="boton" onclick="f_a('b')" name="btnb" id="btnb">B</button>
       <button type="submit" class="boton" onclick="f_a('c')" name="btnc" id="btnc">C</button>

@@ -41,6 +41,11 @@ Form.addEventListener("submit", function (event) {
 });
 
 
+function jugar(params) {
+    document.getElementById('formhome').style.display = "none";
+    document.getElementById('form').style.display = "";
+}
+
 function f_a(letra) { // let a = document.getElementById("btna").value;
     let resultado2 = array.filter(x => x.toLowerCase().includes(letra));
     // const resultado2 = array.find(array => array == 'a');
@@ -48,8 +53,9 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
 
     if (array.length == 1) {
 
-        document.getElementById('oculto').style.display = "";;
-
+        document.getElementById('oculto').style.display = "";
+        document.getElementById('formganaste').style.display = "";
+        document.getElementById('form').style.display = "none";
     }
 
     if (resultado2.length < 1) {
@@ -59,6 +65,8 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
         document.getElementById('btn' + letra).setAttribute("disabled", "disabled");
         if (array.length < incorrecto) {
             document.getElementById('oculto2').style.display = "";
+            document.getElementById('form').style.display = "none";
+            document.getElementById('formperdiste').style.display = "";
             document.getElementById("img").src = "/img/ahorcado.png";
         }
 

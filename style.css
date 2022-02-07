@@ -3,6 +3,8 @@ background-color: #1d3557;
  background-image: url("img/ok.jpg");
  background-repeat: no-repeat;
  background-size :cover;
+ color: aliceblue;
+ text-align: center;
 }
 
 .form {
@@ -23,16 +25,31 @@ background-color: #1d3557;
     color : rgb(238, 238, 238);
     border-radius : 5px;
     width : 7%;
-    height : 8%;
-    font-size : 20px;
+    height : 7%;
+    font-size : 18px;
     cursor: pointer;
     border: 0px;
 
 }
 
+.botona {
+    text-align: center;
+    background-color : rgb(38, 73, 228);
+    color : rgb(238, 238, 238);
+    border-radius : 5px;
+    width : 26%;
+    height : 7%;
+    font-size : 18px;
+    cursor: pointer;
+    border: 0px;
+
+}
 .img {
 
-    width:  10%;
+    width:  20%;
+    position:relative;
+left:38px;
+top:1px;
 }
 .oculto{
 font-size: 30px;
