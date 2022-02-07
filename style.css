@@ -104,7 +104,7 @@ color: #e600b0;
     body {
         background-image: url("img/ok2.jpg");
         background-position: right center;
-         background-repeat: repeat;
+         background-repeat: no-repeat;
          background-size :cover;
          color: aliceblue;
          text-align: center;
