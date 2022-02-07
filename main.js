@@ -22,14 +22,16 @@ let reset = false;
 let correcto = 0;
 let incorrecto = 0;
 let palabrasuser = [];
-aleatorio = Math.floor(Math.random() * (palabras.length));
+let aleatorio = Math.floor(Math.random() * (palabras.length));
 let seleccion = palabras[aleatorio]
 let array1 = seleccion.split('');
 let array = array1.reverse();
 console.log("trace(seleccion)", array)
 
+if (reset == true) {
+  
 
-
+}
 
 for (let index = 0; index < array.length; index++) {
     const element = array[index];
@@ -50,6 +52,8 @@ function jugar(params) {
     document.getElementById('formperdiste').style.display = "none";
     document.getElementById('formganaste').style.display = "none";
 }
+
+
 
 
 function home(params) {
@@ -83,7 +87,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
 
     if (resultado2.length < 1) {
         incorrecto = incorrecto + 1;
-        document.getElementById("img").src = "img/ahorcado"+incorrecto+".png";
+        document.getElementById("img").src = "img/ahorcado" + incorrecto + ".png";
         // document.getElementById('btn' + letra).style.visibility = 'hidden';
         document.getElementById('btn' + letra).setAttribute("disabled", "disabled");
         if (array.length < incorrecto) {
@@ -91,8 +95,8 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             document.getElementById('form').style.display = "none";
             document.getElementById('formperdiste').style.display = "";
             document.getElementById("img").src = "img/ahorcado.png";
+            document.getElementById('palabra').setAttribute("value",seleccion);
         }
-
 
 
     } else {
@@ -106,7 +110,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
             document.getElementById('btn' + letra).setAttribute("id", "btnokd" + letra);
             correcto = correcto + 1;
-            //incorrecto = incorrecto - 1;
+            // incorrecto = incorrecto - 1;
             array = array.filter(function (f) {
                 return f !== letra;
             })
