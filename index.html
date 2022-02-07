@@ -34,8 +34,9 @@
     <img src="img/duende.png" id="imgj" class="img"><br />
     <div class="oculto" id="oculto" style="display: none;">¡Agrega palabras!</div><br /><br /><br /><br />
     <button type="submit" class="botona" onclick="document.location.reload(true)" name="btna" id="btna">Volver</button><br /><br />
-    <input type="text" id="texto" value=""/> <button type="submit" class="botona" onclick="guardar()" name="btna" id="btna">Guardar Palabra</button>
+    <input type="text" id="texto" value="" required/> <button type="submit" class="botona" onclick="guardar()" name="btna" id="btna">Guardar Palabra</button>
     <div class="oculto" id="oculto3" style="display: none;">¡Palabra Guardada!</div><br /><br />
+    <div class="oculto" id="oculto4" style="display: none;">¡Campo Vacio!</div><br /><br />
   </div>
 
 
@@ -51,7 +52,7 @@
       <br /><br />
         <img src="img/duende.png" id="img" class="img">
       <br /><br />
-      
+     
       <button type="submit" class="boton" onclick="f_a('a')" name="btna" id="btna">A</button>
       <button type="submit" class="boton" onclick="f_a('b')" name="btnb" id="btnb">B</button>
       <button type="submit" class="boton" onclick="f_a('c')" name="btnc" id="btnc">C</button>

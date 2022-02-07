@@ -80,15 +80,26 @@ function palabra(params) {
 
 function guardar() {
     let texto = document.getElementById('texto').value;
-    palabrasuser.push(texto);
-    console.log(palabrasuser);
-     document.getElementById('oculto3').style.display = "";
+    if (texto=="") {
+        document.getElementById('oculto4').style.display = "";
+        setTimeout(function(){
+            document.getElementById('oculto4').style.display = "none";
+        }, 2000);
+       
+    }
+    else  {
+        palabrasuser.push(texto);
+        console.log(palabrasuser);
+         document.getElementById('oculto3').style.display = "";
+         setTimeout(function(){
+            document.getElementById('oculto3').style.display = "none";
+        }, 1000);
+       
+    }
+   
     
    
-    setTimeout(function(){
-        document.getElementById('oculto3').style.display = "none";
-    }, 1000);
-   
+    
     //document.getElementById("texto").reset();
     document.getElementById('texto').value = "";
     document.getElementById('texto').setAttribute("value", "");
