@@ -106,6 +106,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
         document.getElementById('oculto').style.display = "";
         document.getElementById('formganaste').style.display = "";
         document.getElementById('form').style.display = "none";
+        document.getElementById('formperdiste').style.display = "none";
     }
 
     if (resultado2.length < 1) {
@@ -132,6 +133,8 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             quita.replaceChild(btn, pone)
             document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
             document.getElementById('btn' + letra).setAttribute("id", "btnokd" + letra);
+            
+           
             correcto = correcto + 1;
             // incorrecto = incorrecto - 1;
             array = array.filter(function (f) {
