@@ -20,10 +20,10 @@ let palabras = [
 ];
 let guardado = localStorage.getItem('datos');
 if (guardado != "") {
-  
-    palabras= palabras.concat(JSON.parse(guardado));
-    console.log(palabras , "guardas")
- }
+
+    palabras = palabras.concat(JSON.parse(guardado));
+    console.log(palabras, "guardas")
+}
 let reset = false;
 let correcto = 0;
 let incorrecto = 0;
@@ -33,9 +33,6 @@ let seleccion = palabras[aleatorio]
 let array1 = seleccion.split('');
 let array = array1.reverse();
 console.log("trace(seleccion)", array)
-
-
-
 
 
 for (let index = 0; index < array.length; index++) {
@@ -60,7 +57,6 @@ function jugar(params) {
 
 
 
-
 function home(params) {
     document.getElementById('form').style.display = "none";
     document.getElementById('formhome').style.display = "";
@@ -68,6 +64,8 @@ function home(params) {
     document.getElementById('formperdiste').style.display = "none";
     document.getElementById('formganaste').style.display = "none";
 }
+
+
 
 
 function palabra(params) {
@@ -80,34 +78,32 @@ function palabra(params) {
 
 function guardar() {
     let texto = document.getElementById('texto').value;
-    if (texto=="") {
+    if (texto == "") {
         document.getElementById('oculto4').style.display = "";
-        setTimeout(function(){
+        setTimeout(function () {
             document.getElementById('oculto4').style.display = "none";
         }, 2000);
-       
-    }
-    else  {
+
+    } else {
         palabrasuser.push(texto);
         console.log(palabrasuser);
-         document.getElementById('oculto3').style.display = "";
-         setTimeout(function(){
+        document.getElementById('oculto3').style.display = "";
+        setTimeout(function () {
             document.getElementById('oculto3').style.display = "none";
         }, 1000);
-       
+
     }
-   
-    
-   
-    
-    //document.getElementById("texto").reset();
+
+
+    // document.getElementById("texto").reset();
     document.getElementById('texto').value = "";
     document.getElementById('texto').setAttribute("value", "");
     localStorage.setItem('datos', JSON.stringify(palabrasuser));
     return false; // stop submission
-  }
+}
 
 function f_a(letra) { // let a = document.getElementById("btna").value;
+
     let resultado2 = array.filter(x => x.toLowerCase().includes(letra));
     // const resultado2 = array.find(array => array == 'a');
     console.log("clicka", resultado2)
@@ -130,7 +126,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             document.getElementById('form').style.display = "none";
             document.getElementById('formperdiste').style.display = "";
             document.getElementById("img").src = "img/ahorcado.png";
-            document.getElementById('palabra').setAttribute("value",seleccion);
+            document.getElementById('palabra').setAttribute("value", seleccion);
         }
 
 
@@ -145,11 +141,9 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             pone = document.getElementById("img_" + letra);
             quita.replaceChild(btn, pone);
             document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
-            //document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
             document.getElementById('btn' + letra).setAttribute("disabled", "disabled");
-            //document.getElementById('btn' + letra).setAttribute("id", "btn" + letra);
-            
-           
+
+
             correcto = correcto + 1;
             // incorrecto = incorrecto - 1;
             array = array.filter(function (f) {
@@ -161,5 +155,11 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
 
 }
 
+function pintar(letra) {
+    document.getElementById('btna').setAttribute("style", "background-color: #e600b0;");
+    document.getElementById('btna').setAttribute("disabled", "disabled");
+    document.getElementsByName("btna").className = 'morado';
+    document.getElementById("btna").style.display = "none";
+    console.log("morado")
 
-document.write('<br>')
+}
