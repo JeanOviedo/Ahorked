@@ -1,16 +1,24 @@
 body {
-background-color: #1d3557;
+background-color: #080129;
  background-image: url("img/ok.jpg");
+ 
  background-repeat: no-repeat;
  background-size :cover;
  color: aliceblue;
  text-align: center;
  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+a{
+    color: #e600b0;
+}
 
+
+.icos {
+    width: 60px;
+}
 .form {
 
-    background-color: rgb(12, 5, 58);
+    background-color: #000836;
     border-radius: 3em;
     width: 700px;
     height: 400px;
@@ -30,6 +38,8 @@ background-color: #1d3557;
     font-size : 18px;
     cursor: pointer;
     border: 0px;
+    
+ 
 
 }
 
@@ -43,7 +53,7 @@ background-color: #1d3557;
     font-size : 18px;
     cursor: pointer;
     border: 0px;
-
+    border: solid 3px #e600b0;
 }
 
 
@@ -78,5 +88,68 @@ color: #e600b0;
     background-color : rgb(48, 50, 61);
 
     
+
+}
+
+
+@media only screen and (max-width:850px) {
+
+    .form {
+     
+        width: 60%;
+        height: 70%;
+       
+    }
+
+    body {
+        background-image: url("img/ok2.jpg");
+        background-position: right center;
+         background-repeat: repeat;
+         background-size :cover;
+         color: aliceblue;
+         text-align: center;
+         font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+    .boton {
+        
+        width : 13%;
+        height : 14%;
+        font-size : 10px;
+        cursor: pointer;
+        border: 0px;
+    
+    
+    }
+
+    
+.icos {
+    width: 30px;
+}
+
+    .botona {
+        
+        width : 39%;
+        height : 19%;
+        font-size : 15px;
+        cursor: pointer;
+        border: 0px;
+        border: solid 3px #e600b0;
+    
+    }
+
+    .img {
+
+        width:  27%;
+        position:relative;
+    left:0x;
+    top:1px;
+    }
+    .img2 {
+        width: 40%;
+        position: relative;
+        left: 0px;
+        top: 1px;
+    }
 
 }

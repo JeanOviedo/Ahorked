@@ -40,7 +40,7 @@ console.log("trace(seleccion)", array)
 
 for (let index = 0; index < array.length; index++) {
     const element = array[index];
-    document.getElementById('form').insertAdjacentHTML('afterbegin', `<img src="img/img.png" alt="" id="img_${element}" name="img_${element}"  value="${element}"/>`)
+    document.getElementById('form').insertAdjacentHTML('afterbegin', `<img src="img/img.png" alt="" class="icos" id="img_${element}" name="img_${element}"  value="${element}"/>`)
 
 }
 
@@ -128,11 +128,15 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
         for (let index = 0; resultado2.length; index++) {
             var btn = document.createElement('img')
             btn.src = 'img/' + letra + '.png';
+            btn.class = 'icos';
             let quita = document.getElementById("form");
             let pone = document.getElementById("img_" + letra);
+            pone = document.getElementById("img_" + letra);
             quita.replaceChild(btn, pone)
             document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
-            document.getElementById('btn' + letra).setAttribute("id", "btnokd" + letra);
+            document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
+            document.getElementById('btn' + letra).setAttribute("disabled", "disabled");
+            //document.getElementById('btn' + letra).setAttribute("id", "btn" + letra);
             
            
             correcto = correcto + 1;
