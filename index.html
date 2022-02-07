@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Ahorked by Jean Oviedo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="style.css" />
@@ -17,12 +17,23 @@
   <div class="form" id="formperdiste" style="display: none;">
     <img src="img/ahorcado.png" id="imgj" class="img"><br />
     <div class="oculto" id="oculto2" style="display: none;">¡Perdiste!</div><br /><br />
+    <button type="submit" class="botona" onclick="jugar('a')" name="btna" id="btna">Jugar de Nuevo</button><br /><br />
+    <button type="submit" class="botona" onclick="home('a')" name="btna" id="btna">Inicio</button><br /><br />
   </div>
 
   <div class="form" id="formganaste" style="display: none;">
     <img src="img/duende.png" id="imgj" class="img"><br />
     <div class="oculto" id="oculto" style="display: none;">¡Ganastes!</div><br /><br />
   </div>
+
+
+  <div class="form" id="formadd" style="display: none;">
+    <img src="img/duende.png" id="imgj" class="img"><br />
+    <div class="oculto" id="oculto" style="display: none;">¡Agrega palabras!</div><br /><br /><br /><br />
+    <button type="submit" class="botona" onclick="home('a')" name="btna" id="btna">Volver</button><br /><br />
+    <input type="text"> <button type="submit" class="botona" onclick="jugar('a')" name="btna" id="btna">Guardar</button>
+  </div>
+
 
   
   <div class="form" id="formhome" >

@@ -18,6 +18,7 @@ let palabras = [
     "bailar"
 
 ];
+let reset = false;
 let correcto = 0;
 let incorrecto = 0;
 let palabrasuser = [];
@@ -26,6 +27,8 @@ let seleccion = palabras[aleatorio]
 let array1 = seleccion.split('');
 let array = array1.reverse();
 console.log("trace(seleccion)", array)
+
+
 
 
 for (let index = 0; index < array.length; index++) {
@@ -44,6 +47,26 @@ Form.addEventListener("submit", function (event) {
 function jugar(params) {
     document.getElementById('formhome').style.display = "none";
     document.getElementById('form').style.display = "";
+    document.getElementById('formperdiste').style.display = "none";
+    document.getElementById('formganaste').style.display = "none";
+}
+
+
+function home(params) {
+    document.getElementById('form').style.display = "none";
+    document.getElementById('formhome').style.display = "";
+    document.getElementById('formadd').style.display = "none";
+    document.getElementById('formperdiste').style.display = "none";
+    document.getElementById('formganaste').style.display = "none";
+}
+
+
+function palabra(params) {
+    document.getElementById('form').style.display = "none";
+    document.getElementById('formhome').style.display = "none";
+    document.getElementById('formadd').style.display = "";
+    document.getElementById('formperdiste').style.display = "none";
+    document.getElementById('formganaste').style.display = "none";
 }
 
 function f_a(letra) { // let a = document.getElementById("btna").value;
