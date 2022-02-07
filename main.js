@@ -143,7 +143,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             let quita = document.getElementById("form");
             let pone = document.getElementById("img_" + letra);
             pone = document.getElementById("img_" + letra);
-            quita.replaceChild(btn, pone)
+            quita.replaceChild(btn, pone);
             document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
             //document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
             document.getElementById('btn' + letra).setAttribute("disabled", "disabled");
