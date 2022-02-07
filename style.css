@@ -30,7 +30,7 @@ a{
 
 .boton {
     text-align: center;
-    background-color : rgb(38, 73, 228);
+    background-color : #131b4d;
     color : rgb(238, 238, 238);
     border-radius : 5px;
     width : 7%;
@@ -45,7 +45,7 @@ a{
 
 .botona {
     text-align: center;
-    background-color : rgb(38, 73, 228);
+    background-color : #0c1446;
     color : rgb(238, 238, 238);
     border-radius : 5px;
     width : 26%;
@@ -91,12 +91,17 @@ color: #e600b0;
 
 }
 
+.morado {
+
+    background-color: #e600b0;
+}
+
 
 @media only screen and (max-width:850px) {
 
     .form {
      
-        width: 60%;
+        width: 75%;
         height: 70%;
        
     }
@@ -125,7 +130,7 @@ color: #e600b0;
 
     
 .icos {
-    width: 30px;
+    width: 30px !important;
 }
 
     .botona {
@@ -140,14 +145,14 @@ color: #e600b0;
     }
 
     .img {
-
+text-align: center;
         width:  27%;
         position:relative;
     left:0x;
     top:1px;
     }
     .img2 {
-        width: 40%;
+        width: 50%;
         position: relative;
         left: 0px;
         top: 1px;
