@@ -113,11 +113,12 @@ color: #e600b0;
 
     .boton {
         
-        width : 13%;
-        height : 14%;
+        width : 23%;
+        height : 24px;
         font-size : 10px;
         cursor: pointer;
         border: 0px;
+        margin: 1px;
     
     
     }

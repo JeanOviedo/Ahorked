@@ -126,7 +126,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
     } else {
 
         for (let index = 0; resultado2.length; index++) {
-            var btn = document.createElement('img')
+            let btn = document.createElement('img')
             btn.src = 'img/' + letra + '.png';
             btn.class = 'icos';
             let quita = document.getElementById("form");
@@ -134,7 +134,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
             pone = document.getElementById("img_" + letra);
             quita.replaceChild(btn, pone)
             document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
-            document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
+            //document.getElementById('btn' + letra).setAttribute("style", "background-color: #e600b0;");
             document.getElementById('btn' + letra).setAttribute("disabled", "disabled");
             //document.getElementById('btn' + letra).setAttribute("id", "btn" + letra);
             
