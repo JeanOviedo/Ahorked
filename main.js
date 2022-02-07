@@ -60,14 +60,14 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
 
     if (resultado2.length < 1) {
         incorrecto = incorrecto + 1;
-        document.getElementById("img").src = "/img/ahorcado"+incorrecto+".png";
+        document.getElementById("img").src = "img/ahorcado"+incorrecto+".png";
         // document.getElementById('btn' + letra).style.visibility = 'hidden';
         document.getElementById('btn' + letra).setAttribute("disabled", "disabled");
         if (array.length < incorrecto) {
             document.getElementById('oculto2').style.display = "";
             document.getElementById('form').style.display = "none";
             document.getElementById('formperdiste').style.display = "";
-            document.getElementById("img").src = "/img/ahorcado.png";
+            document.getElementById("img").src = "img/ahorcado.png";
         }
 
 
@@ -76,7 +76,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
 
         for (let index = 0; resultado2.length; index++) {
             var btn = document.createElement('img')
-            btn.src = '/img/' + letra + '.png';
+            btn.src = 'img/' + letra + '.png';
             let quita = document.getElementById("form");
             let pone = document.getElementById("img_" + letra);
             quita.replaceChild(btn, pone)
