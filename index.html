@@ -19,13 +19,13 @@
     <div class="oculto" id="oculto2" style="display: none;">¡Perdiste!</div><br /><br /> 
     La palabra era : <input type="text" id="palabra" value=""><br /><br />
     <button type="submit" class="botona" onClick="document.location.reload(true)" name="btna" id="btna">Jugar de Nuevo</button><br /><br />
-    <button type="submit" class="botona" onclick="home('a')" name="btna" id="btna">Inicio</button><br /><br />
+  
   </div>
 
   <div class="form" id="formganaste" style="display: none;">
     <img src="img/duende.png" id="imgj" class="img"><br /><br /><br />
     <button type="submit" class="botona" onClick="document.location.reload(true)"  name="btna" id="btna">Jugar de Nuevo</button><br /><br />
-    <button type="submit" class="botona" onclick="home('a')" name="btna" id="btna">Inicio</button><br /><br />
+
     <div class="oculto" id="oculto" style="display: none;">¡Ganastes!</div><br /><br />
   </div>
 
@@ -33,17 +33,18 @@
   <div class="form" id="formadd" style="display: none;">
     <img src="img/duende.png" id="imgj" class="img"><br />
     <div class="oculto" id="oculto" style="display: none;">¡Agrega palabras!</div><br /><br /><br /><br />
-    <button type="submit" class="botona" onclick="home('a')" name="btna" id="btna">Volver</button><br /><br />
-    <input type="text"> <button type="submit" class="botona" onclick="jugar('a')" name="btna" id="btna">Guardar</button>
+    <button type="submit" class="botona" onclick="document.location.reload(true)" name="btna" id="btna">Volver</button><br /><br />
+    <input type="text" id="texto" value=""/> <button type="submit" class="botona" onclick="guardar()" name="btna" id="btna">Guardar Palabra</button>
+    <div class="oculto" id="oculto3" style="display: none;">¡Palabra Guardada!</div><br /><br />
   </div>
 
 
   
-  <div class="form" id="formhome" >
-    <img src="img/duende.png" id="imgj" class="img"><br /><br />
+  <div class="" id="formhome" >
+    <img src="img/duende.png" id="imgj" class="img2"><br /><br />
     <div class="oculto" id="oculto" style="display: none;">¡Jugar!</div><br /><br />
     <button type="submit" class="botona" onclick="jugar('a')" name="btna" id="btna">Jugar</button>
-    <button type="submit" class="botona" onclick="palabra('a')" name="btna" id="btna">Agregar Palabras</button>
+    <button type="submit" class="botona" onclick="palabra('a')" name="btna" id="btna">Agregar Palabras</button> ><br /><br />
   </div>
 
     <div class="form" id="form" style="display: none;">
@@ -77,9 +78,10 @@
       <button type="submit" class="boton" onclick="f_a('x')" name="btnx" id="btnx">X</button>
       <button type="submit" class="boton" onclick="f_a('y')" name="btny" id="btny">Y</button>
       <button type="submit" class="boton" onclick="f_a('z')" name="btnz" id="btnz">Z</button>
-    </div><br /><br />
+    </div>
 </center>
   
+Proyecto realizado por <a href="https://github.com/JeanOviedo">Jean oviedo</a> parra el Challenger de Alura y Oracle.
   </body>
   <script src="main.js"></script>
 </html>

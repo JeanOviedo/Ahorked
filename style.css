@@ -5,6 +5,7 @@ background-color: #1d3557;
  background-size :cover;
  color: aliceblue;
  text-align: center;
+ font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .form {
@@ -44,9 +45,19 @@ background-color: #1d3557;
     border: 0px;
 
 }
+
+
+.img2 {
+    width: 20%;
+    position: relative;
+    left: 0px;
+    top: 1px;
+}
+
+
 .img {
 
-    width:  20%;
+    width:  15%;
     position:relative;
 left:38px;
 top:1px;

@@ -18,6 +18,12 @@ let palabras = [
     "bailar"
 
 ];
+let guardado = localStorage.getItem('datos');
+if (guardado != "") {
+  
+    palabras= palabras.concat(JSON.parse(guardado));
+    console.log(palabras , "guardas")
+ }
 let reset = false;
 let correcto = 0;
 let incorrecto = 0;
@@ -28,10 +34,9 @@ let array1 = seleccion.split('');
 let array = array1.reverse();
 console.log("trace(seleccion)", array)
 
-if (reset == true) {
-  
 
-}
+
+
 
 for (let index = 0; index < array.length; index++) {
     const element = array[index];
@@ -72,6 +77,24 @@ function palabra(params) {
     document.getElementById('formperdiste').style.display = "none";
     document.getElementById('formganaste').style.display = "none";
 }
+
+function guardar() {
+    let texto = document.getElementById('texto').value;
+    palabrasuser.push(texto);
+    console.log(palabrasuser);
+     document.getElementById('oculto3').style.display = "";
+    
+   
+    setTimeout(function(){
+        document.getElementById('oculto3').style.display = "none";
+    }, 1000);
+   
+    //document.getElementById("texto").reset();
+    document.getElementById('texto').value = "";
+    document.getElementById('texto').setAttribute("value", "");
+    localStorage.setItem('datos', JSON.stringify(palabrasuser));
+    return false; // stop submission
+  }
 
 function f_a(letra) { // let a = document.getElementById("btna").value;
     let resultado2 = array.filter(x => x.toLowerCase().includes(letra));
