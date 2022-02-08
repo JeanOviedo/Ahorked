@@ -109,8 +109,7 @@ function f_a(letra) { // let a = document.getElementById("btna").value;
     console.log("clicka", resultado2)
 
     if (array.length == 1) {
-
-        document.getElementById('oculto').style.display = "";
+        
         document.getElementById('formganaste').style.display = "";
         document.getElementById('form').style.display = "none";
         document.getElementById('formperdiste').style.display = "none";
